@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cakes'n'Fruities</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-yellow': '#FFF900',
+                        'brand-brown': '#B37414',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white font-sans">
+    <custom-navbar></custom-navbar>
+    
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-brand-brown to-yellow-400 py-20" style="background-image: url('images/hero-bgmenu.jpg');">
+            <div class="container mx-auto px-4 text-center text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Our Menu</h1>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                    Discover our delicious selection of pastries, cakes, and celebration packages
+                </p>
+            </div>
+        </section>
+
+        <!-- Filter Buttons -->
+        <section class="py-8 bg-yellow-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button data-filter="all" class="bg-brand-brown text-white px-6 py-2 rounded-full font-semibold transition duration-300" onclick="filterProducts('all')">
+                        All Items
+                    </button>
+                    <button data-filter="cakes" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-brand-brown hover:text-white transition duration-300" onclick="filterProducts('cakes')">
+                        Cakes
+                    </button>
+                    <button data-filter="pastries" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-brand-brown hover:text-white transition duration-300" onclick="filterProducts('pastries')">
+                        Pastries
+                    </button>
+                    <button data-filter="packages" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-brand-brown hover:text-white transition duration-300" onclick="filterProducts('packages')">
+                        Packages
+                    </button>
+                    <button data-filter="smallchops" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-brand-brown hover:text-white transition duration-300" onclick="filterProducts('smallchops')">
+                        Small Chops
+                    </button>
+                    <button data-filter="fruitparfait" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-brand-brown hover:text-white transition duration-300" onclick="filterProducts('fruitparfait')">
+                        Fruit Parfait
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="py-20 bg-yellow-200">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- 6'1 inch buttercream Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/61inchbdcake.PNG" alt="6 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">6'1 inch buttercream Cake</h3>
+                            <p class="text-gray-600 mb-4">Classic 6'1 inch birthday cake with buttercream icing</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦18,000</span>
+                                <button onclick="addToCart('6-by-1-inch-buttercream-cake', '6 by 1 inch buttercream Cake', 18000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7'1 inch buttercream Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/71inchbdcake.PNG" alt="7 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">7'1 inch buttercream Cake</h3>
+                            <p class="text-gray-600 mb-4">Classic 7'1 inch birthday cake with buttercream icing</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦20,000</span>
+                                <button onclick="addToCart('7-by-1-inch-buttercream-cake', '7 by 1 inch buttercream Cake', 20000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8'1 inch buttercream Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/81inchcake.PNG" alt="8 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">8'1 inch buttercream Cake</h3>
+                            <p class="text-gray-600 mb-4">Classic 8'1 inch birthday cake with buttercream icing</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦23,000</span>
+                                <button onclick="addToCart('8-by-1-inch-buttercream-cake', '8 by 1 inch buttercream Cake', 23000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6 inch plain Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/61plain.jpg" alt="6 inch plain Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">6 inch plain cake</h3>
+                            <p class="text-gray-600 mb-4">Comes in either vanilla, red velvet, or chocolate flavour</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦6,000</span>
+                                <button onclick="addToCart('6-inch-plain-cake', '6 inch plain Cake', 6000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8 inch plain Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/81plain.jpg" alt="8 inch plain Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">8 inch plain cake</h3>
+                            <p class="text-gray-600 mb-4">Comes in either vanilla, red velvet, or chocolate flavour</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦7,000</span>
+                                <button onclick="addToCart('8-inch-plain-cake', '8 inch plain Cake', 7000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10 inch plain Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/101plain.jpeg" alt="10 inch plain Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">10 inch plain cake</h3>
+                            <p class="text-gray-600 mb-4">Comes in either vanilla, red velvet, or chocolate flavour</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦8,000</span>
+                                <button onclick="addToCart('10-inch-plain-cake', '10 inch plain Cake', 8000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6 inch special Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/6fruit.jpg" alt="6 inch special Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">6 inch special cake</h3>
+                            <p class="text-gray-600 mb-4">Fruit cake or Oreos and cookies cake</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦7,000</span>
+                                <button onclick="addToCart('6-inch-special-cake', '6 inch special Cake', 7000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8 inch special Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/8spec.jpg" alt="8 inch special Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">8 inch special cake</h3>
+                            <p class="text-gray-600 mb-4">Fruit cake or Oreos and cookies cake</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦8,500</span>
+                                <button onclick="addToCart('8-inch-special-cake', '8 inch special Cake', 8500)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10 inch special Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/10spec.jpg" alt="10 inch special Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">10 inch special cake</h3>
+                            <p class="text-gray-600 mb-4">Fruit cake or Oreos and cookies cake</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦10,000</span>
+                                <button onclick="addToCart('10-inch-special-cake', '10 inch special Cake', 10000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/customsake.PNG" alt="Custom Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Custom cake</h3>
+                            <p class="text-gray-600 mb-4">Large-sized birthday cake with multiple layers</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦65,000</span>
+                                <button onclick="addToCart('Custom-cake', 'Custom Cake', 65000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Cake - Small -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/index4.jpeg" alt="Custom Cake - Small" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Custom cake - small</h3>
+                            <p class="text-gray-600 mb-4">Large-sized birthday cake with more than one layer</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦50,000</span>
+                                <button onclick="addToCart('Custom-cake-small', 'Custom Cake - small', 50000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Kids Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/kidsbdcake.PNG" alt="kids Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">kids cake</h3>
+                            <p class="text-gray-600 mb-4">Special kids themed decorated birthday cake</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦65,000</span>
+                                <button onclick="addToCart('kids-cake', 'Kids Cake', 65000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Grace Box -->
+                    <div data-product data-category="smallchops" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/gracesmallchop.PNG" alt="Grace smallchops" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">The Grace Box</h3>
+                            <p class="text-gray-600 mb-4">Small Chops package containing 2 samosas, 2 spring rolls, 5 puffpuffs, and one chicken</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦5,000</span>
+                                <button onclick="addToCart('the-grace-box', 'The Grace Box', 5000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Party Pack -->
+                    <div data-product data-category="smallchops" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/partysmallchop.PNG" alt="Party smallchops" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">The Party Pack</h3>
+                            <p class="text-gray-600 mb-4">Small Chops package containing 5 samosas, 5 spring rolls, 5 puffpuffs, and one chicken</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦7,000</span>
+                                <button onclick="addToCart('the-party-pack', 'The Party Pack', 7000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Signature Mix -->
+                    <div data-product data-category="smallchops" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/signaturesmallchop.PNG" alt="Signature smallchops" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">The Signature Mix</h3>
+                            <p class="text-gray-600 mb-4">Small Chops package containing 10 samosas, 10 spring rolls, 20 puffpuffs, and 5 chickens</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦32,500</span>
+                                <button onclick="addToCart('the-signature-mix', 'The Signature Mix', 32500)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blueberry Parfait -->
+                    <div data-product data-category="fruitparfait" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/index2.jpg" alt="Blueberry Parfait" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Blueberry Parfait</h3>
+                            <p class="text-gray-600 mb-4">A blend of berries, fruits, and greek yoghurt in cups delight</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦6,500</span>
+                                <button onclick="addToCart('blueberry-parfait', 'Blueberry Parfait', 6500)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fruit Parfait -->
+                    <div data-product data-category="fruitparfait" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/fruitparfait.PNG" alt="Blueberry Parfait" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Fruit Parfait</h3>
+                            <p class="text-gray-600 mb-4">A blend of fruits and greek yoghurt in cups delight</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦5,000</span>
+                                <button onclick="addToCart('Fruit-parfait', 'Fruit Parfait', 5000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strawberry Cuplet -->
+                    <div data-product data-category="fruitparfait" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/strawberrycuplet.PNG" alt="Blueberry Parfait" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Strawberry Cuplet</h3>
+                            <p class="text-gray-600 mb-4">A blend of strawberries, fruits, and greek yoghurt in cups delight</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦6,500</span>
+                                <button onclick="addToCart('strawberry-cuplet', 'Strawberry Cuplet', 6500)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Party Perfect Platter -->
+                    <div data-product data-category="packages" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/partyperfectplatter.PNG" alt="Party Perfect Platter" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Party Perfect Platter</h3>
+                            <p class="text-gray-600 mb-4">Mix of small chops, buttercream 7'1 inch cake, and any box of pastries of choice including donuts, meatpie, etc</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦75,000</span>
+                                <button onclick="addToCart('Party-Perfect-Platter', 'Party Perfect Platter', 75000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Small Chops and Cake Combo -->
+                    <div data-product data-category="packages" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/cakeandsmallchopscombo.PNG" alt="Cake and small chops" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Cake and Small Chops Combo</h3>
+                            <p class="text-gray-600 mb-4">Mix of small chops, buttercream 6'1 inch cake or bento cake</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦25,000</span>
+                                <button onclick="addToCart('cake-and-small-chops-ombo', 'Cake and Small Chops Combo', 25000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Food Tray Cake Inclusive -->
+                    <div data-product data-category="packages" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/foodtray.PNG" alt="Food tray - Cake inclusive" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Food Tray - Cake Inclusive</h3>
+                            <p class="text-gray-600 mb-4">Luxurious food platter and cooking in variety of sizes - International and Local dish - Cake inclusive</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦200,000</span>
+                                <button onclick="addToCart('food-tray-cake-inclusive', 'Food Tray - Cake Inclusive', 200000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food Tray -->
+                    <div data-product data-category="packages" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/foodtraynocake.PNG" alt="Food tray" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Food Tray</h3>
+                            <p class="text-gray-600 mb-4">Luxurious food platter and cooking in variety of sizes - International and Local dish</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦180,000</span>
+                                <button onclick="addToCart('food-tray', 'Food Tray', 180000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Wedding Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/weddingcake.PNG" alt="Wedding Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Wedding Cake</h3>
+                            <p class="text-gray-600 mb-4">Elegant multi-tier wedding masterpiece</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦180,000</span>
+                                <button onclick="addToCart('wedding-cake', 'Wedding Cake', 180000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cake Parfait -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/cakeparfait.PNG" alt="cake parfait" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Cake Parfait</h3>
+                            <p class="text-gray-600 mb-4">Moist blend of differnt flavours of cake pieces with cream in cup's delight</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦4,000</span>
+                                <button onclick="addToCart('cake-parfait', 'Cake Parfait', 4000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Eggroll -->
+                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/eggroll.png" alt="eggroll" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Rich Eggroll</h3>
+                            <p class="text-gray-600 mb-4">Fried from fresh unadulterated oil under clean hygiene</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦850</span>
+                                <button onclick="addToCart('rich-eggroll', 'Rich Eggroll', 850)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chinchin -->
+                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/milkychinchin.PNG" alt="eggroll" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Milk Chinchin</h3>
+                            <p class="text-gray-600 mb-4">Milky and crunchy. Fried from fresh unadulterated oil under clean hygiene</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦5000</span>
+                                <button onclick="addToCart('milk-chinchin', 'Milk Chinchin', 5000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Banana Bread -->
+                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/bananabread.PNG" alt="banana bread" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Banana Bread</h3>
+                            <p class="text-gray-600 mb-4">Banana bread infused with chocolate baked under clean hygiene</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦4000</span>
+                                <button onclick="addToCart('banana-bread', 'Banana Bread', 4000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milky doughnuts -->
+                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/milkydonut.PNG" alt="milkydoughnut" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Milky Doughnuts</h3>
+                            <p class="text-gray-600 mb-4">A box of 3 milky doughnuts fried from fresh unadulterated oil under clean hygiene</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦4000</span>
+                                <button onclick="addToCart('milky-doughnuts', 'Milky Doughnuts', 4000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filled doughnuts -->
+                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/filleddonut.PNG" alt="filled doughnut" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Filled Doughnuts</h3>
+                            <p class="text-gray-600 mb-4">A box of 3 cream-filled doughnuts fried from fresh unadulterated oil under clean hygiene</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦3000</span>
+                                <button onclick="addToCart('filled-doughnuts', 'filled Doughnuts', 3000)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plain doughnuts -->
+                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/plaindough.PNG" alt="plain doughnut" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Plain Doughnuts</h3>
+                            <p class="text-gray-600 mb-4">A box of 3 sweet doughnuts fried from fresh unadulterated oil under clean hygiene</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦2500</span>
+                                <button onclick="addToCart('plain-doughnuts', 'plain Doughnuts', 2500)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Meatpie -->
+                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/meatpie.PNG" alt="meatpie" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Box of Meatpie</h3>
+                            <p class="text-gray-600 mb-4">A box of 3 yummy meatpies fried from fresh unadulterated oil under clean hygiene</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦3500</span>
+                                <button onclick="addToCart('box-of-meatpie', 'Box of Meatpie', 3500)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foil Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/platecake.PNG" alt="foil Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Foil Cake</h3>
+                            <p class="text-gray-600 mb-4">Hot and sumptuous cake of any flavour served in a plate foil</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦2,500</span>
+                                <button onclick="addToCart('foil-cake', 'foil Cake', 2500)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bento Cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/bento.png" alt="Bento Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Bento Cake</h3>
+                            <p class="text-gray-600 mb-4">Small-sized cake to celebrate your birthday within budget</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦10,500</span>
+                                <button onclick="addToCart('bento-cake', 'Bento Cake', 10500)" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Information -->
+        <section class="py-16 bg-yellow-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-brand-brown mb-8">How to Order</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-yellow-50 p-6 rounded-2xl shadow-lg">
+                        <i data-feather="shopping-cart" class="w-12 h-12 text-brand-brown mx-auto mb-4"></i>
+                        <h3 class="font-bold text-lg text-gray-800 mb-4">Place Your Order</h3>
+                        <p class="text-gray-700 mb-4">
+                    Select your desired items and click "Add to Order". When ready, proceed to checkout.
+                </p>
+            </div>
+            <div class="bg-yellow-50 p-6 rounded-2xl shadow-lg">
+                    <i data-feather="clock" class="w-12 h-12 text-brand-brown mx-auto mb-4"></i>
+                    <h3 class="font-bold text-lg text-gray-800 mb-4">Delivery & Pickup</h3>
+                    <p class="text-gray-700 mb-4">
+                    We offer delivery within Abuja and pickup options at our location.
+                </p>
+            </div>
+            <div class="bg-yellow-50 p-6 rounded-2xl shadow-lg">
+                    <i data-feather="message-circle" class="w-12 h-12 text-brand-brown mx-auto mb-4"></i>
+                    <h3 class="font-bold text-lg text-gray-800 mb-4">Custom Orders</h3>
+                    <p class="text-gray-700">
+                    Need something special? Contact us for custom orders and personalized creations.
+                </p>
+            </div>
+        </div>
+        <div class="mt-12">
+            <a href="contact.html" class="btn-secondary px-8 py-4 rounded-full font-bold text-lg">
+                        Contact for Custom Orders
+                    </a>
+
+            <a href="cart.html" class="btn-secondary px-8 py-4 rounded-full font-bold text-lg">
+                        View Cart
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+
+    <!-- Image Modal -->
+<div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+    <img id="modalImage" src="" alt="Full Size" class="max-w-full max-h-full rounded-lg shadow-lg">
+</div>
+
+<script>
+    // Get modal elements
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    // Add click listener to all product images
+    document.querySelectorAll('.product-card img').forEach(img => {
+        img.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            modalImg.src = img.src;
+        });
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+</script>
+
+</body>
+</html>
+"
+</body>
+</html>
