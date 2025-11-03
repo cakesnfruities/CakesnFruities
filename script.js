@@ -160,9 +160,10 @@ function filterProducts(category) {
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Add to cart functionality
-function addToCart(productId, productName, price) {
+// Add to cart functionality (with image support)
+function addToCart(productId, productName, price, imageSrc) {
     const existingItem = cart.find(item => item.id === productId);
-    
+
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
@@ -170,10 +171,11 @@ function addToCart(productId, productName, price) {
             id: productId,
             name: productName,
             price: price,
-            quantity: 1
+            quantity: 1,
+            image: imageSrc // ✅ store the image
         });
     }
-    
+
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay();
     showSuccessMessage(`${productName} added to your order!`);
@@ -187,29 +189,33 @@ function updateCartDisplay() {
     const grandTotalElement = document.getElementById('grand-total');
     const emptyCartMessage = document.getElementById('empty-cart');
     const cartContent = document.querySelector('section.py-16');
-    
+
+    // If cart is empty
     if (cart.length === 0) {
         if (cartContent) cartContent.classList.add('hidden');
         if (emptyCartMessage) emptyCartMessage.classList.remove('hidden');
         return;
     }
-    
+
+    // If cart has items
     if (cartContent) cartContent.classList.remove('hidden');
     if (emptyCartMessage) emptyCartMessage.classList.add('hidden');
-    
+
     if (cartItemsContainer) {
         cartItemsContainer.innerHTML = '';
-        
+
         let subtotal = 0;
-        
+
         cart.forEach((item, index) => {
             const itemTotal = item.price * item.quantity;
             subtotal += itemTotal;
-            
+
+            const imageSrc = item.image ? item.image : 'http://static.photos/food/200x200/${index + 6}'; // ✅ Use stored image
+
             const cartItemHTML = `
                 <div class="flex items-center justify-between border-b border-gray-200 pb-6">
                     <div class="flex items-center space-x-4">
-                        <img src="http://static.photos/food/200x200/${index + 6}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg">
+                        <img src="${imageSrc}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg">
                         <div>
                             <h4 class="font-bold text-gray-800">${item.name}</h4>
                             <p class="text-gray-600">₦${item.price.toLocaleString()}</p>
@@ -218,32 +224,35 @@ function updateCartDisplay() {
                     <div class="flex items-center space-x-4">
                         <div class="flex items-center space-x-2">
                             <button onclick="updateQuantity(${index}, -1)" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition duration-300">
-                            <i data-feather="minus" class="w-3 h-3"></i>
-                        </button>
-                        <span class="font-bold text-gray-800">${item.quantity}</span>
-                        <button onclick="updateQuantity(${index}, 1)" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition duration-300">
-                            <i data-feather="plus" class="w-3 h-3"></i>
-                        </button>
+                                <i data-feather="minus" class="w-3 h-3"></i>
+                            </button>
+                            <span class="font-bold text-gray-800">${item.quantity}</span>
+                            <button onclick="updateQuantity(${index}, 1)" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition duration-300">
+                                <i data-feather="plus" class="w-3 h-3"></i>
+                            </button>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xl font-bold text-brand-brown">₦${itemTotal.toLocaleString()}</p>
+                        </div>
                     </div>
-                    <div class="text-right">
-                        <p class="text-xl font-bold text-brand-brown">₦${itemTotal.toLocaleString()}</p>
                 </div>
-            </div>
             `;
-            
+
             cartItemsContainer.innerHTML += cartItemHTML;
         });
-        
-        // Calculate delivery charge based on location
+
+        // Calculate delivery charge
         const deliveryLocation = document.getElementById('delivery-location');
         const deliveryCharge = deliveryLocation ? getDeliveryCharge(deliveryLocation.value) : 10000;
-        
+
         const grandTotal = subtotal + deliveryCharge;
-        
+
+        // Update totals
         if (subtotalElement) subtotalElement.textContent = `₦${subtotal.toLocaleString()}`;
         if (deliveryChargeElement) deliveryChargeElement.textContent = `₦${deliveryCharge.toLocaleString()}`;
         if (grandTotalElement) grandTotalElement.textContent = `₦${grandTotal.toLocaleString()}`;
-        
+
+        // Refresh icons
         feather.replace();
     }
 }
@@ -418,4 +427,5 @@ if ('IntersectionObserver' in window) {
     document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
     });
+
 }
