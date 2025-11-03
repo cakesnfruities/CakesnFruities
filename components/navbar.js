@@ -55,7 +55,7 @@ class CustomNavbar extends HTMLElement {
           <div class="flex justify-between items-center py-4">
             <!-- ✅ Logo + Brand Name -->
             <a href="index.html" class="flex items-center space-x-2">
-              <img src="C:/Users/User/Desktop/phebian/images/logo.png" alt="Cakesn'Fruities Logo" class="logo-img">
+              <img src="images/logo.png" alt="Cakesn'Fruities Logo" class="logo-img">
               <span class="text-2xl font-bold" style="color:#B37414;">Cakesn'Fruities</span>
             </a>
 
@@ -104,3 +104,4 @@ class CustomNavbar extends HTMLElement {
 
 // ✅ Define the custom element
 customElements.define('custom-navbar', CustomNavbar);
+
