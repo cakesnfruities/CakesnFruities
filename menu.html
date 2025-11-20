@@ -58,6 +58,9 @@
                     <button data-filter="fruitparfait" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-brand-brown hover:text-white transition duration-300" onclick="filterProducts('fruitparfait')">
                         Fruit Parfait
                     </button>
+                    <button data-filter="drinks" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-brand-brown hover:text-white transition duration-300" onclick="filterProducts('drinks')">
+                        Drinks
+                    </button>
                 </div>
             </div>
         </section>
@@ -69,43 +72,133 @@
 
                     <!-- 6'1 inch buttercream Cake -->
                     <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
-                        <img src="images/61inchbdcake.PNG" alt="6 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+    <img src="images/61inchbdcake.PNG" alt="6 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">6'1 inch Buttercream Cake</h3>
+        <p class="text-gray-600 mb-4">Classic 6'1 inch birthday cake with buttercream icing</p>
+
+        <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-brand-brown">₦15,000 – ₦17,000</span>
+
+            <button 
+                onclick="chooseCakeLayer()" 
+                class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                Add to Order
+            </button>
+        </div>
+    </div>
+</div>
+                   <!-- 7'1 inch buttercream Cake -->
+<div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+    <img src="images/71inchbdcake.PNG" alt="7 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">7'1 inch Buttercream Cake</h3>
+        <p class="text-gray-600 mb-4">Classic 7'1 inch birthday cake with buttercream icing</p>
+
+        <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-brand-brown">₦17,000 – ₦19,000</span>
+
+            <button 
+                onclick="choose7InchLayer()" 
+                class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                Add to Order
+            </button>
+        </div>
+    </div>
+</div>
+
+                  <!-- 8'1 inch buttercream Cake -->
+<div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+    <img src="images/81inchcake.PNG" alt="8 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">8'1 inch Buttercream Cake</h3>
+        <p class="text-gray-600 mb-4">Classic 8'1 inch birthday cake with buttercream icing</p>
+
+        <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-brand-brown">₦20,500 – ₦21,500</span>
+
+            <button 
+                onclick="choose8InchLayer()" 
+                class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                Add to Order
+            </button>
+        </div>
+    </div>
+</div>
+
+                    <!-- 10'1 inch buttercream Cake -->
+<div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+    <img src="images/101inchcake.PNG" alt="10 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">10'1 inch Buttercream Cake</h3>
+        <p class="text-gray-600 mb-4">Classic 10'1 inch birthday cake with buttercream icing</p>
+
+        <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-brand-brown">₦22,500 – ₦25,000</span>
+
+            <button 
+                onclick="choose10InchLayer()" 
+                class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                Add to Order
+            </button>
+        </div>
+    </div>
+</div>
+
+                     <!-- 6 inch whipped cream cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/61wc.jpg" alt="6 by 1 inch whipped cream Cake" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">6'1 inch buttercream Cake</h3>
-                            <p class="text-gray-600 mb-4">Classic 6'1 inch birthday cake with buttercream icing</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">6 by 1 inch whipped cream frosting cake</h3>
+                            <p class="text-gray-600 mb-4">Comes in either vanilla, red velvet, or chocolate flavour</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-brand-brown">₦18,000</span>
-                                <button onclick="addToCart('6-by-1-inch-buttercream-cake', '6 by 1 inch buttercream Cake', 18000, 'images/61inchbdcake.PNG')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                <span class="text-2xl font-bold text-brand-brown">₦19,000</span>
+                                <button onclick="addToCart('6-by-1-inch-whipped-cream-frosting-cake', '6 by 1 inch whipped cream frosting cake', 19000, 'images/61wc.jpg')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
                                     Add to Order
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 7'1 inch buttercream Cake -->
+                   <!-- 7 inch whipped cream cake -->
                     <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
-                        <img src="images/71inchbdcake.PNG" alt="7 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+                        <img src="images/71wc.jpg" alt="7 by 1 inch whipped cream Cake" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">7'1 inch buttercream Cake</h3>
-                            <p class="text-gray-600 mb-4">Classic 7'1 inch birthday cake with buttercream icing</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">7 by 1 inch whipped cream frosting cake</h3>
+                            <p class="text-gray-600 mb-4">Comes in either vanilla, red velvet, or chocolate flavour</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-2xl font-bold text-brand-brown">₦20,000</span>
-                                <button onclick="addToCart('7-by-1-inch-buttercream-cake', '7 by 1 inch buttercream Cake', 20000, 'images/71inchbdcake.PNG')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                <button onclick="addToCart('7-by-1-inch-whipped-cream-frosting-cake', '7 by 1 inch whipped cream frosting cake', 20000, 'images/71wc.jpg')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
                                     Add to Order
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 8'1 inch buttercream Cake -->
+                    <!-- 8 inch whipped cream cake -->
                     <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
-                        <img src="images/81inchcake.PNG" alt="8 by 1 inch buttercream Cake" class="w-full h-48 object-cover">
+                        <img src="images/81wc.jpg" alt="8 by 1 inch whipped cream Cake" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">8'1 inch buttercream Cake</h3>
-                            <p class="text-gray-600 mb-4">Classic 8'1 inch birthday cake with buttercream icing</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">8 by 1 inch whipped cream frosting cake</h3>
+                            <p class="text-gray-600 mb-4">Comes in either vanilla, red velvet, or chocolate flavour</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-brand-brown">₦23,000</span>
-                                <button onclick="addToCart('8-by-1-inch-buttercream-cake', '8 by 1 inch buttercream Cake', 23000, 'images/81inchcake.PNG')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                <span class="text-2xl font-bold text-brand-brown">₦25,000</span>
+                                <button onclick="addToCart('8-by-1-inch-whipped-cream-frosting-cake', '8 by 1 inch whipped cream frosting cake', 25000, 'images/81wc.jpg')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10 inch whipped cream cake -->
+                    <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/101wc.jpg" alt="10 by 1 inch whipped cream Cake" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">10 by 1 inch whipped cream frosting cake</h3>
+                            <p class="text-gray-600 mb-4">Comes in either vanilla, red velvet, or chocolate flavour</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦28,000</span>
+                                <button onclick="addToCart('10-by-1-inch-whipped-cream-frosting-cake', '10 by 1 inch whipped cream frosting cake', 28000, 'images/101wc.jpg')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
                                     Add to Order
                                 </button>
                             </div>
@@ -338,6 +431,35 @@
                         </div>
                     </div>
 
+                    <!-- Creamy Yoghurt -->
+                    <div data-product data-category="drinks" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/creamy.jpg" alt="Creamy Yoghurt" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Creamy Yoghurt</h3>
+                            <p class="text-gray-600 mb-4">Creamy, wholesome yoghurt with a perfect balance of richness and freshness.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦4,000</span>
+                                <button onclick="addToCart('creamy-yoghurt', 'Creamy Yoghurt', 4000, 'images/creamy.jpg')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+ <!-- Cold Fruity Zobo -->
+                    <div data-product data-category="drinks" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="images/zobo.jpg" alt="Zobo" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Cold Fruity Zobo</h3>
+                            <p class="text-gray-600 mb-4">500ml - A refreshing blend of chilled zobo infused with natural fruity goodness. </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-brand-brown">₦1,200</span>
+                                <button onclick="addToCart('cold-fruity-zobo', 'Cold Fruity Zobo', 1200, 'images/zobo.jpg')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm"></button>
+                                    Add to Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Party Perfect Platter -->
                     <div data-product data-category="packages" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
@@ -433,19 +555,38 @@
                     </div>
                     
                     <!-- Eggroll -->
-                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
-                        <img src="images/eggroll.png" alt="eggroll" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Rich Eggroll</h3>
-                            <p class="text-gray-600 mb-4">Fried from fresh unadulterated oil under clean hygiene</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-brand-brown">₦850</span>
-                                <button onclick="addToCart('rich-eggroll', 'Rich Eggroll', 850, 'images/eggroll.png')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
-                                    Add to Order
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+<div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+    <img src="images/eggroll.png" alt="eggroll" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Crusty Eggroll</h3>
+        <p class="text-gray-600 mb-4">Fried from fresh unadulterated oil under clean hygiene</p>
+        <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-brand-brown">₦850 (MOQ 5)---₦650 (Bulk orders of 50 and above)</span>
+
+            <button onclick="chooseEggrollQuantity()" 
+                class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                Add to Order
+            </button>
+        </div>
+    </div>
+</div>
+
+  <!-- Fish roll -->
+<div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+    <img src="images/fr.jpg" alt="fishroll" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Fried Fishroll</h3>
+        <p class="text-gray-600 mb-4">Fried from fresh unadulterated oil under clean hygiene</p>
+        <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-brand-brown">₦300 (MOQ 10)</span>
+
+            <button onclick="chooseFishrollQuantity()"
+                class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                Add to Order
+            </button>
+        </div>
+    </div>
+</div>
 
                     <!-- Chinchin -->
                     <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
@@ -507,35 +648,39 @@
                         </div>
                     </div>
 
-                    <!-- Plain doughnuts -->
+                    <!-- Pillowy Donut -->
+<div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+    <img src="images/plaindough.PNG" alt="pillowy donuts" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Pillowy Doughnuts </h3>
+        <p class="text-gray-600 mb-4">Fried from fresh unadulterated oil under clean hygiene</p>
+        <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-brand-brown">₦900 (MOQ 3)---₦800 (Bulk orders of 50 and above)</span>
+
+            <button onclick="chooseDonutQuantity()"
+                class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                Add to Order
+            </button>
+        </div>
+    </div>
+</div>
+
+
+                    <!-- Meatpie -->
                     <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
-                        <img src="images/plaindough.PNG" alt="plain doughnut" class="w-full h-48 object-cover">
+                        <img src="images/meatpie.PNG" alt="meatpie" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Plain Doughnuts</h3>
-                            <p class="text-gray-600 mb-4">A box of 3 sweet doughnuts fried from fresh unadulterated oil under clean hygiene</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Box of Flaky Meatpie</h3>
+                            <p class="text-gray-600 mb-4">A box of yummy flaky meatpies baked with passion and under clean hygiene</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-brand-brown">₦2500</span>
-                                <button onclick="addToCart('plain-doughnuts', 'plain Doughnuts', 2500, 'images/plaindough.PNG')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                <span class="text-2xl font-bold text-brand-brown">₦1500 (MOQ 3)---₦1350 (Bulk orders of 50 and above)</span>
+                                <button onclick="chooseMeatPieQuantity()" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
                                     Add to Order
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Meatpie -->
-                    <div data-product data-category="pastries" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
-                        <img src="images/meatpie.PNG" alt="meatpie" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Box of Meatpie</h3>
-                            <p class="text-gray-600 mb-4">A box of 3 yummy meatpies fried from fresh unadulterated oil under clean hygiene</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-brand-brown">₦3500</span>
-                                <button onclick="addToCart('box-of-meatpie', 'Box of Meatpie', 3500, 'images/meatpie.PNG')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
-                                    Add to Order
-                                </button>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Foil Cake -->
                     <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
@@ -544,8 +689,8 @@
                             <h3 class="text-xl font-bold text-gray-800 mb-2">Foil Cake</h3>
                             <p class="text-gray-600 mb-4">Hot and sumptuous cake of any flavour served in a plate foil</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-brand-brown">₦2,500</span>
-                                <button onclick="addToCart('foil-cake', 'foil Cake', 2500, 'images/platecake.PNG')" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                                <span class="text-2xl font-bold text-brand-brown">₦2,500 – ₦4,000</span>
+                                <button onclick= "chooseFoilCakeSize()" class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
                                     Add to Order
                                 </button>
                             </div>
@@ -556,7 +701,7 @@
                     <div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
                         <img src="images/bento.png" alt="Bento Cake" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Bento Cake</h3>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Cute 5” Bento cakes</h3>
                             <p class="text-gray-600 mb-4">Small-sized cake to celebrate your birthday within budget</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-2xl font-bold text-brand-brown">₦10,500</span>
@@ -566,6 +711,26 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Cup Cake -->
+<div data-product data-category="cakes" class="product-card bg-yellow-100 rounded-2xl shadow-lg overflow-hidden">
+    <img src="images/cupcake.jpg" alt="cup cakes" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Box of 6/12 Cup Cakes</h3>
+        <p class="text-gray-600 mb-4">Classic Box of 6/12 Cup Cakes</p>
+
+        <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-brand-brown">₦12,000 – ₦20,500</span>
+
+            <button 
+                onclick="chooseCupCakeSize()" 
+                class="btn-primary px-4 py-2 rounded-full font-semibold text-sm">
+                Add to Order
+            </button>
+        </div>
+    </div>
+</div>
+
                 </div>
             </div>
         </section>
@@ -641,6 +806,297 @@
             modal.classList.add('hidden');
         }
     });
+
+
+    function chooseCakeLayer() {
+    const choice = prompt(
+        "Choose your cake layer:\n\n1. Thin Layer — ₦15,000\n2. Thick Layer — ₦17,000\n\nEnter 1 or 2:"
+    );
+
+    if (choice === "1") {
+        addToCart(
+            "6-by-1-inch-buttercream-cake-thin",
+            "6 by 1 inch Buttercream Cake (Thin Layer)",
+            15000,
+            "images/61inchbdcake.PNG"
+        );
+        alert("Thin layer added to cart!");
+    }
+
+    else if (choice === "2") {
+        addToCart(
+            "6-by-1-inch-buttercream-cake-thick",
+            "6 by 1 inch Buttercream Cake (Thick Layer)",
+            17000,
+            "images/61inchbdcake.PNG"
+        );
+        alert("Thick layer added to cart!");
+    }
+
+    else {
+        alert("Invalid choice. Please try again.");
+    }
+}
+
+function choose7InchLayer() {
+    const choice = prompt(
+        "Choose your cake layer:\n\n1. Thin Layer — ₦17,000\n2. Thick Layer — ₦19,000\n\nEnter 1 or 2:"
+    );
+
+    if (choice === "1") {
+        addToCart(
+            "7-inch-buttercream-cake-thin",
+            "7 by 1 inch Buttercream Cake (Thin Layer)",
+            17000,
+            "images/71inchbdcake.PNG"
+        );
+        alert("Thin layer added to cart!");
+    }
+
+    else if (choice === "2") {
+        addToCart(
+            "7-inch-buttercream-cake-thick",
+            "7 by 1 inch Buttercream Cake (Thick Layer)",
+            19000,
+            "images/71inchbdcake.PNG"
+        );
+        alert("Thick layer added to cart!");
+    }
+
+    else {
+        alert("Invalid choice. Please try again.");
+    }
+}
+
+function choose8InchLayer() {
+    const choice = prompt(
+        "Choose your cake layer:\n\n1. Thin Layer — ₦20,500\n2. Thick Layer — ₦21,500\n\nEnter 1 or 2:"
+    );
+
+    if (choice === "1") {
+        addToCart(
+            "8-inch-buttercream-cake-thin",
+            "8 by 1 inch Buttercream Cake (Thin Layer)",
+            20500,
+            "images/81inchcake.PNG"
+        );
+        alert("Thin layer added to cart!");
+    }
+
+    else if (choice === "2") {
+        addToCart(
+            "8-inch-buttercream-cake-thick",
+            "8 by 1 inch Buttercream Cake (Thick Layer)",
+            21500,
+            "images/81inchcake.PNG"
+        );
+        alert("Thick layer added to cart!");
+    }
+
+    else {
+        alert("Invalid choice. Please try again.");
+    }
+}
+
+function choose10InchLayer() {
+    const choice = prompt(
+        "Choose your cake layer:\n\n1. Thin Layer — ₦22,500\n2. Thick Layer — ₦25,000\n\nEnter 1 or 2:"
+    );
+
+    if (choice === "1") {
+        addToCart(
+            "10-inch-buttercream-cake-thin",
+            "10 by 1 inch Buttercream Cake (Thin Layer)",
+            22500,
+            "images/101inchcake.PNG"
+        );
+        alert("Thin layer added to cart!");
+    }
+
+    else if (choice === "2") {
+        addToCart(
+            "10-inch-buttercream-cake-thick",
+            "10 by 1 inch Buttercream Cake (Thick Layer)",
+            25000,
+            "images/101inchcake.PNG"
+        );
+        alert("Thick layer added to cart!");
+    }
+
+    else {
+        alert("Invalid choice. Please try again.");
+    }
+}
+
+function chooseEggrollQuantity() {
+    let qty = prompt(
+        "Enter quantity for Eggroll:\n\nMinimum Order: 5 pieces\nBulk price (50+): ₦650 each\nRegular price: ₦850 each"
+    );
+
+    qty = Number(qty);
+
+    // Validate number
+    if (!qty || qty < 5) {
+        alert("Minimum order quantity is 5 eggrolls.");
+        return;
+    }
+
+    // Determine price
+    let pricePerPiece = qty >= 50 ? 650 : 850;
+    let totalPrice = pricePerPiece * qty;
+
+    addToCart(
+        "crusty-eggroll-" + qty,
+        qty + " pcs Crusty Eggroll",
+        totalPrice,
+        "images/eggroll.png"
+    );
+
+    alert(qty + " eggroll(s) added to cart at ₦" + pricePerPiece + " each.");
+}
+
+function chooseFishrollQuantity() {
+    let qty = prompt(
+        "Enter quantity for Fishroll:\n\nMinimum Order: 10 pieces\nRegular price: ₦300 each"
+    );
+
+    qty = Number(qty);
+
+    // Validate number
+    if (!qty || qty < 10) {
+        alert("Minimum order quantity is 10 Fishrolls.");
+        return;
+    }
+
+    // Determine price
+    let pricePerPiece = 300;
+    let totalPrice = pricePerPiece * qty;
+
+    addToCart(
+        "fried-fishroll-" + qty,
+        qty + " pcs Fried Fishroll",
+        totalPrice,
+        "images/fr.jpg"
+    );
+
+    alert(qty + " Fishroll(s) added to cart at ₦" + pricePerPiece + " each.");
+}
+
+function chooseDonutQuantity() {
+    let qty = prompt(
+        "Enter quantity for Doughnut:\n\nMinimum Order: 3 pieces\nBulk price (50+): ₦800 each\nRegular price: ₦900 each"
+    );
+
+    qty = Number(qty);
+
+    // Validate number
+    if (!qty || qty < 3) {
+        alert("Minimum order quantity is 3 Doughnuts.");
+        return;
+    }
+
+    // Determine price
+    let pricePerPiece = qty >= 50 ? 800 : 900;
+    let totalPrice = pricePerPiece * qty;
+
+    addToCart(
+        "pillowy-doughnut-" + qty,
+        qty + " pcs Pillowy Doughnut",
+        totalPrice,
+        "images/plaindough.PNG"
+    );
+
+    alert(qty + " Doughnut(s) added to cart at ₦" + pricePerPiece + " each.");
+}
+
+function chooseFoilCakeSize() {
+    const choice = prompt(
+        "Choose your foil cake size:\n\n1. Mini Plate — ₦2,500\n2. Big Plate — ₦4,000\n\nEnter 1 or 2:"
+    );
+
+    if (choice === "1") {
+        addToCart(
+            "foil-cake-mini-plate",
+            "Foil Cake (Mini Plate)",
+            2500,
+            "images/platecake.PNG"
+        );
+        alert("Mini Plate added to cart!");
+    }
+
+    else if (choice === "2") {
+        addToCart(
+            "foil-cake-big-plate",
+            "Foil Cake (Big Plate)",
+            4000,
+            "images/platecake.PNG"
+        );
+        alert("Big Plate added to cart!");
+    }
+
+    else {
+        alert("Invalid choice. Please try again.");
+    }
+}
+
+function chooseMeatPieQuantity() {
+    let qty = prompt(
+        "Enter quantity for MeatPie:\n\nMinimum Order: 3 pieces\nBulk price (50+): ₦1350 each\nRegular price: ₦1500 each"
+    );
+
+    qty = Number(qty);
+
+    // Validate number
+    if (!qty || qty < 3) {
+        alert("Minimum order quantity is 3 MeatPies.");
+        return;
+    }
+
+    // Determine price
+    let pricePerPiece = qty >= 50 ? 1350 : 1500;
+    let totalPrice = pricePerPiece * qty;
+
+    addToCart(
+        "meat-pie-" + qty,
+        qty + " pcs Meat Pie",
+        totalPrice,
+        "images/meatpie.PNG"
+
+    );
+
+    alert(qty + " meatpie(s) added to cart at ₦" + pricePerPiece + " each.");
+}
+
+function chooseCupCakeSize() {
+    const choice = prompt(
+        "Choose your box of cupcake:\n\n1. Box of 6 — ₦12,000\n2. Box of 12 — ₦20,500\n\nEnter 1 or 2:"
+    );
+
+    if (choice === "1") {
+        addToCart(
+            "box-of-6-cupcakes",
+            "Cupcakes (Box of 6)",
+            12000,
+            "images/cupcake.jpg"
+        );
+        alert("Box of 6 added to cart!");
+    }
+
+    else if (choice === "2") {
+        addToCart(
+            "box-of-12-cupcakes",
+            "Cupcakes (Box of 12)",
+            20500,
+            "images/cupcake.jpg"
+        );
+        alert("Box of 12 added to cart!");
+    }
+
+    else {
+        alert("Invalid choice. Please try again.");
+    }
+}
+
 </script>
 
 </body>
@@ -649,5 +1105,4 @@
 </body>
 
 </html>
-
 
