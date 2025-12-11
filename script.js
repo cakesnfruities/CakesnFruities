@@ -260,14 +260,29 @@ function updateCartDisplay() {
 // Get delivery charge based on location
 function getDeliveryCharge(location) {
     const charges = {
-        'gwarimpa': 10000,
-        'wuse': 10000,
-        'asokoro': 11000,
-        'maitama': 12000,
-        'garki': 13000
+        'gwarimpa': 4000,
+        'wuse': 4000,
+        'asokoro': 3000,
+        'maitama': 5000,
+        'garki': 3000,
+        'old karu': 2500,
+        'city college': 2500,
+        'kubwa': 5000,
+        'lugbe': 5000,
+        'Mararaba': 3000,
+        'nyanya': 2000,
+        'abacha road': 2000,
+        'lokongoma': 5000,
+        'dutse': 5000,
+        'gwagwalada': 6000,
+        'orozo': 2000,
+        'bwari': 6500,
+        'apo': 4000,
+        'ushafa': 6000,
+        'masaka': 5000,
     };
     
-    return charges[location] || 10000;
+    return charges[location] || 5000;
 }
 
 // Update item quantity
@@ -429,3 +444,4 @@ if ('IntersectionObserver' in window) {
     });
 
 }
+
