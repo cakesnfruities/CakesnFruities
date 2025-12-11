@@ -476,7 +476,7 @@ class CustomChatbot extends HTMLElement {
   },
   {
     question: 'What are your delivery charges?',
-    answer: 'Delivery charges within Abuja typically range between ₦10,000 and ₦13,000 depending on your exact location. The final delivery fee will be confirmed when you place your order.',
+    answer: 'Delivery charges within Abuja typically range between ₦2,000 and ₦6,500 depending on your exact location. The final delivery fee will be confirmed when you place your order.',
     related: ['Can I pick up instead?', 'Do you offer free delivery for large orders?']
   },
   {
@@ -536,7 +536,7 @@ class CustomChatbot extends HTMLElement {
   },
   {
     question: 'What happens if I miss my delivery?',
-    answer: 'If delivery fails because no one was available to receive it, we’ll reschedule for a small additional fee. Perishable items may need to be remade if not collected promptly.',
+    answer: 'If delivery fails because no one was available to receive it, we’ll reschedule for a small additional fee. Perishable items may need to be remade if not collected promptly at a specified fee.',
     related: ['Can someone else receive my order?', 'Can I change my delivery address after ordering?']
   },
   {
@@ -614,7 +614,7 @@ class CustomChatbot extends HTMLElement {
   },
   {
     question: 'Can I pre-book for holidays?',
-    answer: 'Absolutely! You can pre-book for festive seasons like Christmas, Valentine’s Day, or birthdays. Early booking helps you secure a guaranteed slot.',
+    answer: 'Absolutely! You should pre-book for festive seasons like Christmas, Valentine’s Day, or birthdays. Early booking helps you secure a guaranteed slot.',
     related: ['Can I book my event date months ahead?', 'Do you close during festive seasons?']
   },
   {
@@ -858,7 +858,7 @@ class CustomChatbot extends HTMLElement {
   },
   {
     question: 'Are your cakes halal?',
-    answer: 'Yes, all our cakes are halal. We do not use alcohol or any non-halal ingredients in our standard recipes.',
+    answer: 'Yes, all our cakes are halal. We do not use alcohol or any non-halal ingredients in our standard recipes except for fruit cakes.',
     related: ['Do you use alcohol in your recipes?', 'Are your products safe for kids?']
   },
   {
@@ -883,7 +883,7 @@ class CustomChatbot extends HTMLElement {
   },
   {
     question: 'How long do your pastries last?',
-    answer: 'Our pastries stay fresh for up to 2–3 days at room temperature and up to a week if refrigerated properly.',
+    answer: 'Our pastries stay fresh for up to 3–5 days at room temperature and up to a week if refrigerated properly.',
     related: ['How do I store my cake properly?', 'Can I refrigerate or freeze your pastries?']
   },
   {
@@ -898,7 +898,7 @@ class CustomChatbot extends HTMLElement {
   },
   {
     question: 'Do you use alcohol in your recipes?',
-    answer: 'No, we do not use alcohol in our cakes or pastries, except for special custom requests — and we always confirm with the customer first.',
+    answer: 'No, we do not use alcohol (except in fruit cakes) in our cakes or pastries, except for special custom requests — and we always confirm with the customer first.',
     related: ['Are your cakes halal?', 'Are your products safe for kids?']
   },
   {
@@ -1054,7 +1054,7 @@ class CustomChatbot extends HTMLElement {
 'General Enquiries & Brand Info': [
   {
     question: 'Where are you located?',
-    answer: 'We’re based in [Your City/Area], Nigeria. You can order online, via WhatsApp, or visit us by appointment for pickups and consultations.',
+    answer: 'We’re based in Abuja, Nigeria. You can order online, via WhatsApp, or visit us by appointment for pickups and consultations.',
     related: ['Do you deliver nationwide?', 'How can I contact you?']
   },
   {
@@ -1074,7 +1074,7 @@ class CustomChatbot extends HTMLElement {
   },
   {
     question: 'Who founded the brand?',
-    answer: '[Founder’s Name] founded the brand with a passion for baking and teaching others. It started small and has now grown into a trusted name for quality and creativity.',
+    answer: 'Phebian Iyanuoluwa founded the brand with a passion for baking and teaching others. It started small and has now grown into a trusted name for quality and creativity.',
     related: ['What’s your brand story?', 'Do you offer mentorship?']
   },
   {
@@ -1178,3 +1178,4 @@ class CustomChatbot extends HTMLElement {
 }
 
 customElements.define('custom-chatbot', CustomChatbot);
+
