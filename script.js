@@ -269,7 +269,7 @@ function getDeliveryCharge(location) {
         'city college': 2500,
         'kubwa': 5000,
         'lugbe': 5000,
-        'Mararaba': 3000,
+        'mararaba': 3000,
         'nyanya': 2000,
         'abacha road': 2000,
         'lokongoma': 5000,
@@ -444,4 +444,5 @@ if ('IntersectionObserver' in window) {
     });
 
 }
+
 
