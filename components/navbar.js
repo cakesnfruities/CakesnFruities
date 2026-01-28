@@ -50,7 +50,7 @@ class CustomNavbar extends HTMLElement {
         }
       </style>
 
-      <nav class="bg-red-100 shadow-md fixed w-full top-0 z-50">
+      <nav class="bg-red-200 shadow-md fixed w-full top-0 z-50">
         <div class="container mx-auto px-4">
           <div class="flex justify-between items-center py-4">
             <!-- ✅ Logo + Brand Name -->
@@ -104,6 +104,7 @@ class CustomNavbar extends HTMLElement {
 
 // ✅ Define the custom element
 customElements.define('custom-navbar', CustomNavbar);
+
 
 
 
