@@ -113,7 +113,7 @@ class CustomFooter extends HTMLElement {
           <div class="border-t border-red-200 mt-10 pt-6 text-center text-gray-100">
             <p>
               © 2025 Lábálábá. All Rights Reserved.<br>
-              Designed & Published by <span class="text-red-400 font-semibold">FJ CodeSprout Academy</span>.
+              Designed & Published by <span class="text-red-100 font-semibold">FJ CodeSprout Academy</span>.
             </p>
           </div>
         </div>
@@ -134,6 +134,7 @@ class CustomFooter extends HTMLElement {
 }
 
 customElements.define("custom-footer", CustomFooter);
+
 
 
 
