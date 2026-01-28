@@ -16,7 +16,7 @@ class CustomNavbar extends HTMLElement {
         }
 
         .nav-link:hover {
-          color: #B37414;
+          color: #FF46A2;
         }
 
         .nav-link::after {
@@ -26,7 +26,7 @@ class CustomNavbar extends HTMLElement {
           height: 2px;
           bottom: -4px;
           left: 0;
-          background-color: #B37414;
+          background-color: #FF46A2;
           transition: width 0.3s ease;
         }
 
@@ -50,13 +50,13 @@ class CustomNavbar extends HTMLElement {
         }
       </style>
 
-      <nav class="bg-yellow-100 shadow-md fixed w-full top-0 z-50">
+      <nav class="bg-red-100 shadow-md fixed w-full top-0 z-50">
         <div class="container mx-auto px-4">
           <div class="flex justify-between items-center py-4">
             <!-- ✅ Logo + Brand Name -->
             <a href="index.html" class="flex items-center space-x-2">
               <img src="images/logo.png" alt="Lábálábá Logo" class="logo-img">
-              <span class="text-2xl font-bold" style="color:#B37414;">Lábálábá</span>
+              <span class="text-2xl font-bold" style="color:#FF46A2;">Lábálábá</span>
             </a>
 
             <!-- Desktop Menu -->
@@ -104,5 +104,6 @@ class CustomNavbar extends HTMLElement {
 
 // ✅ Define the custom element
 customElements.define('custom-navbar', CustomNavbar);
+
 
 
