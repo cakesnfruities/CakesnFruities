@@ -146,14 +146,14 @@ function filterProducts(category) {
     // Update active filter button
     const filterButtons = document.querySelectorAll('[data-filter]');
     filterButtons.forEach(button => {
-        button.classList.remove('bg-brand-brown', 'text-white');
+        button.classList.remove('bg-brand-red', 'text-white');
         button.classList.add('bg-gray-200', 'text-gray-700');
     });
     
     const activeButton = document.querySelector(`[data-filter="${category}"]`);
     if (activeButton) {
         activeButton.classList.remove('bg-gray-200', 'text-gray-700');
-        activeButton.classList.add('bg-brand-brown', 'text-white');
+        activeButton.classList.add('bg-brand-red', 'text-white');
     }
 }
 // Cart functionality
@@ -232,7 +232,7 @@ function updateCartDisplay() {
                             </button>
                         </div>
                         <div class="text-right">
-                            <p class="text-xl font-bold text-brand-brown">₦${itemTotal.toLocaleString()}</p>
+                            <p class="text-xl font-bold text-brand-red">₦${itemTotal.toLocaleString()}</p>
                         </div>
                     </div>
                 </div>
@@ -444,5 +444,6 @@ if ('IntersectionObserver' in window) {
     });
 
 }
+
 
 
