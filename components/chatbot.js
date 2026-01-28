@@ -208,7 +208,7 @@ class CustomChatbot extends HTMLElement {
               <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                 <i data-feather="user" class="w-4 h-4" style="color:#B37414"></i>
               </div>
-              <h3 class="font-bold">Cakesn'Fruities Assistant 🍰</h3>
+              <h3 class="font-bold">Lábálábá Assistant 🍰</h3>
             </div>
             <button class="minimize-btn" id="minimizeBtn">
               <i data-feather="minus"></i>
@@ -257,7 +257,7 @@ class CustomChatbot extends HTMLElement {
   showWelcomeMessage() {
     const chatMessages = this.shadowRoot.getElementById('chatMessages');
     chatMessages.innerHTML = '';
-    this.addMessage('assistant', "Hi there! 👋 I'm the Cakesn'Fruities Assistant. How can I make your day sweeter?");
+    this.addMessage('assistant', "Hi there! 👋 I'm the Lábálábá Assistant. How can I make your day sweeter?");
     setTimeout(() => this.showCategories(), 500);
   }
 
@@ -1178,4 +1178,5 @@ class CustomChatbot extends HTMLElement {
 }
 
 customElements.define('custom-chatbot', CustomChatbot);
+
 
