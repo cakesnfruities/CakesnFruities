@@ -64,7 +64,7 @@ class CustomChatbot extends HTMLElement {
         }
 
         .chat-header {
-          background: linear-gradient(135deg, #B37414, #9a6210);
+          background: linear-gradient(135deg, #FF46A2, #9a6210);
           color: white;
           padding: 12px 16px;
           border-radius: 20px 20px 0 0;
@@ -206,7 +206,7 @@ class CustomChatbot extends HTMLElement {
           <div class="chat-header">
             <div class="flex items-center space-x-2">
               <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <i data-feather="user" class="w-4 h-4" style="color:#B37414"></i>
+                <i data-feather="user" class="w-4 h-4" style="color:#FF46A2"></i>
               </div>
               <h3 class="font-bold">Lábálábá Assistant 🍰</h3>
             </div>
@@ -1178,6 +1178,7 @@ class CustomChatbot extends HTMLElement {
 }
 
 customElements.define('custom-chatbot', CustomChatbot);
+
 
 
 
