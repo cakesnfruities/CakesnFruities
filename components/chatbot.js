@@ -28,7 +28,7 @@ class CustomChatbot extends HTMLElement {
         .chat-icon {
           width: 60px;
           height: 60px;
-          background-color: #FFF900;
+          background-color: #FF46A2;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -112,7 +112,7 @@ class CustomChatbot extends HTMLElement {
         }
 
         .user-bubble {
-          background: #FFF900;
+          background: #FF46A2;
           color: #000000;
         }
 
@@ -132,13 +132,13 @@ class CustomChatbot extends HTMLElement {
         }
 
         .category-button {
-          border: 2px solid #B37414;
-          color: #B37414;
+          border: 2px solid #FF46A2;
+          color: #FF46A2;
           background: white;
         }
 
         .category-button:hover {
-          background: #B37414;
+          background: #FF46A2;
           color: white;
         }
 
@@ -150,19 +150,19 @@ class CustomChatbot extends HTMLElement {
         }
 
         .question-button:hover {
-          background: #B37414;
+          background: #FF46A2;
           color: white;
         }
 
         .action-button {
-          background: #B37414;
+          background: #FF46A2;
           color: white;
           border: none;
           font-weight: 600;
         }
 
         .action-button:hover {
-          background: #9a6210;
+          background: #FF46A2;
         }
 
         .minimize-btn {
@@ -1178,5 +1178,6 @@ class CustomChatbot extends HTMLElement {
 }
 
 customElements.define('custom-chatbot', CustomChatbot);
+
 
 
