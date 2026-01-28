@@ -11,7 +11,7 @@ class CustomFooter extends HTMLElement {
         }
 
         footer {
-          background-color: #B37414; /* brand brown */
+          background-color: #FF46A2; /* brand red */
           color: white;
         }
 
@@ -21,7 +21,7 @@ class CustomFooter extends HTMLElement {
 
         .social-icon:hover {
           transform: translateY(-3px);
-          color: #FFF900; /* brand yellow */
+          color: #FF46A2; /* brand red */
         }
 
         a {
@@ -29,11 +29,11 @@ class CustomFooter extends HTMLElement {
         }
 
         a:hover {
-          color: #FFF900;
+          color: #FF46A2;
         }
 
         .contact-icon {
-          color: #FFF900;
+          color: #FF46A2;
           width: 20px;
           height: 20px;
           flex-shrink: 0;
@@ -110,10 +110,10 @@ class CustomFooter extends HTMLElement {
           </div>
 
           <!-- Copyright -->
-          <div class="border-t border-yellow-200 mt-10 pt-6 text-center text-gray-100">
+          <div class="border-t border-red-200 mt-10 pt-6 text-center text-gray-100">
             <p>
               © 2025 Lábálábá. All Rights Reserved.<br>
-              Designed & Published by <span class="text-yellow-400 font-semibold">FJ CodeSprout Academy</span>.
+              Designed & Published by <span class="text-red-400 font-semibold">FJ CodeSprout Academy</span>.
             </p>
           </div>
         </div>
@@ -134,5 +134,6 @@ class CustomFooter extends HTMLElement {
 }
 
 customElements.define("custom-footer", CustomFooter);
+
 
 
