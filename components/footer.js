@@ -46,9 +46,9 @@ class CustomFooter extends HTMLElement {
             
             <!-- Brand Info -->
             <div class="md:col-span-2">
-              <h3 class="text-2xl font-bold mb-4 text-white">Cakesn'Fruities</h3>
+              <h3 class="text-2xl font-bold mb-4 text-white">Lábálábá</h3>
               <p class="text-gray-100 mb-4 leading-relaxed">
-                Where passion meets purpose — bringing you homemade pastries, custom cakes, 
+                …sweetening your moments — bringing you homemade pastries, custom cakes, 
                 and special celebration packages crafted with excellence and love.
               </p>
               <div class="flex space-x-4">
@@ -112,7 +112,7 @@ class CustomFooter extends HTMLElement {
           <!-- Copyright -->
           <div class="border-t border-yellow-200 mt-10 pt-6 text-center text-gray-100">
             <p>
-              © 2025 Cakesn'Fruities. All Rights Reserved.<br>
+              © 2025 Lábálábá. All Rights Reserved.<br>
               Designed & Published by <span class="text-yellow-400 font-semibold">FJ CodeSprout Academy</span>.
             </p>
           </div>
@@ -134,4 +134,5 @@ class CustomFooter extends HTMLElement {
 }
 
 customElements.define("custom-footer", CustomFooter);
+
 
